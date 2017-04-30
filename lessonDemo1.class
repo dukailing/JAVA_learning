@@ -1,0 +1,24 @@
+# JAVA_learning
+package lesson2;
+//分支语句，switch，case
+import java.util.Scanner;
+
+public class lesson2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner s=new Scanner(System.in);
+		System.out.println("输入等级");
+		String grade=s.next();
+		switch(grade){
+		case"A":{
+			System.out.println("biaoshi 90fenyisahng");
+			break;
+		}
+		default:{
+			System.out.println("biaoshi 90fenyisahng");
+			break;
+		}
+		}
+		}
+}
