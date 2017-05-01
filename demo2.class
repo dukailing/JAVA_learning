@@ -1,0 +1,46 @@
+package lesson3;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class lesson3 {
+	
+	public static void main(String[]args){
+		//计算两数之间的所有数的值   for
+		
+		Scanner s=new Scanner(System.in);
+		System.out.println("请输入初始值");
+		int m=s.nextInt();
+		System.out.println("请输入结束值");
+		int n=s.nextInt();
+		int sum=0;
+		for(int i=m;i<=n;i++){
+			sum+=i;
+		}
+		System.out.println(sum);
+		
+		
+		//计算1*2+2*3+...+n*(n+1)<1000  while
+		int i1=1;
+		int sum1=0;
+		while(sum1<1000){
+			sum1=sum1+i1*(i1+1);
+			i1++;
+		}
+		System.out.println(i1-1);//注意减一
+		
+		//增强型for循环
+		//数组
+		int ids[]={1,2,3,4,5,6,7,8};//静态
+		int sdi[]= new int[10];//动态初始化，一定要new一块内存
+		int dis[][]={{1,2},{3,4},{5,6}};//二维数组和多维数组静态初始化，3行2列
+		long ddd[][]=new long[5][5];//二维数组动态初始化
+		sdi=Arrays.copyOf(ids,3);
+		for(int j=0;j<5;j++){
+			System.out.println(sdi[j]);
+		}
+		
+		
+	}
+
+}
