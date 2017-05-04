@@ -36,7 +36,7 @@ public class lesson3 {
 		int dis[][]={{1,2},{3,4},{5,6}};//二维数组和多维数组静态初始化，3行2列
 		long ddd[][]=new long[5][5];//二维数组动态初始化
 		sdi=Arrays.copyOf(ids,3);
-		for(int j=0;j<5;j++){
+		for(int j=0;j<5;j++){ 
 			System.out.println(sdi[j]);
 		}
 		
