@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class lesson4 {
+	@SuppressWarnings("null")
+	public static void main(String[]args){
+ 		
+		
+		//从命令行输入两个数字，输出两数之间数的和差商积
+		//判断数字是否为回文
+		@SuppressWarnings("resource")
+		Scanner s=new Scanner(System.in);
+		System.out.println("请输入一个正整数");
+	    int x=s.nextInt();	
+	    if(x<1||x>99999){
+	    	System.out.println("输入错误");
+	    }else{
+	    	int temp=x;
+	    	int rx=0;
+	    	while(temp!=0){
+	    		rx=rx*10+temp%10;
+	    		temp=temp/10; 
+	    	}
+	    	if(rx==x){
+	    		System.out.println("这个数字是回文数字");
+	    	}else{
+	    		System.out.println("这个数字不是回文数字");
+	    	}
+	    }
+//求s=a+aa+aaa+a...a
+	    
+	    int asum=0;	    
+	    int a=s.nextInt();
+	    for(int i = 1;i <= a;i++){
+	    	int asumm=a;
+	    	for(int j = 1;j < i;j++ ){
+	    		asumm*=10;
+	    	}
+	    	asum+=asumm;
+	    }
+//	    for(int i = a;i >= 0;i--){
+//	    	int asumm=a;
+//	    	for(int j = 0;j <i;j++){
+//	    		asumm*=10;
+//	    	}
+//	    	asum+=asumm;
+//	    }
+	    System.out.print(asum);
+
+	    
+	    
+	  //对数组进行冒泡排序
+	    final int X=10;
+	    int[] y=new int[X];
+	    for(int i=0;i<10;i++){
+	    	y[i]=s.nextInt();
+	    }
+	    int k=0;
+	    for(k = 0;k < X - 1;k++){
+	    	for(int j = 0;j <X-k-1; j++){
+	    		if(y[j] > y[j+1]){
+	    			int temp=y[j+1];
+	    			y[j+1]=y[j];
+	    			y[j]=temp;
+	    		}
+	    	}
+	    }
+	    for(int m=0;m<X;m++){
+	    	System.out.print(y[m]);
+	    }
+	   
+	}
+	
+}
