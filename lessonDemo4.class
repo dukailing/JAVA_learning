@@ -1,0 +1,53 @@
+//学生类
+public class lesson5 {
+	//学生类的属性
+	private String name;
+	private String id;
+	private int age;
+	//构造方法,可以重载(含默认)
+	public lesson5(String name ,String id,int age){
+		this.name=name;
+		this.id=id;
+		this.age=age;
+	}
+	//重载
+	public lesson5(){
+		this.name="admin";
+		this.id="123";
+		this.age=18;
+	}
+	//定义方法
+	public String getName(){
+		return this.name;
+	}
+	public void setName(String Name){
+		this.name=Name;
+	}
+	public String getId(){
+		return this.id;
+	}
+	public void setId(String Id){
+		this.name=Id;
+	}
+	//重载函数之间可以相互调用
+	public void study(){
+		System.out.println("day day up");
+	}
+	
+
+}
+
+
+//测试类
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		lesson5 marry=new lesson5();
+		marry.setName("marry");
+		System.out.println("name:"+marry.getName());
+		lesson5 admin=new lesson5();
+		System.out.println("name:"+admin.getName());
+	}
+
+}
