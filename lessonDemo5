@@ -1,0 +1,81 @@
+import lesson9.Student.Date;
+
+public class lesson9 {
+	public static void main(String[]args){
+		//包装器的使用
+		//构造方法创建及对象
+		Integer i=new Integer(12);
+		//可以用i.调用方法
+		//创建方法二
+		Integer i1=Integer.valueOf(13);
+		//将对象转化成基本的类型
+		int k=i.intValue();
+		//++操作不指向同一块地址
+		Integer y=new Integer(567);
+		Integer x=y++;
+		System.out.println(x==y);
+		
+		
+		Student stu=new Student("zz",1984,12,3);
+		Date d=stu.new Date(1976,1,2);
+	}
+
+}
+
+
+
+
+
+package lesson9;
+
+public class Student {
+	 public Student(String name,int y,int m,int d){
+		this.name=name;
+		this.date=new Date(y,m,d);
+	}
+	class Date{
+		private int year;
+		private int month;
+		private int day;
+		public Date(int  year,int month,int day){
+			this.year = year;
+			this.month = month;
+			this.day = day;
+			
+		}
+		public int getYear() {
+			return year;
+		}
+		public void setYear(int year) {
+			this.year = year;
+		}
+		public int getMonth() {
+			return month;
+		}
+		public void setMonth(int month) {
+			this.month = month;
+		}
+		public int getDay() {
+			return day;
+		}
+		public void setDay(int day) {
+			this.day = day;
+		}
+	};
+	private String name;
+	private Date date;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+
+}
